@@ -18,6 +18,7 @@ namespace Palindromes
       string splitString1;
       string splitString2;
       _word = _word.Replace(" ", "");
+      _word = _word.ToLower();
 
       if (_word.Length % 2 == 0)
       {
