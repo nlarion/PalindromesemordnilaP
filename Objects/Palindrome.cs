@@ -17,6 +17,8 @@ namespace Palindromes
     {
       string splitString1;
       string splitString2;
+      _word = _word.Replace(" ", "");
+
       if (_word.Length % 2 == 0)
       {
         splitString1 = _word.Substring(0, (_word.Length / 2));
@@ -26,13 +28,10 @@ namespace Palindromes
       {
         splitString1 = _word.Substring(0, (_word.Length / 2));
         splitString2 = _word.Substring((_word.Length / 2) + 1, (_word.Length / 2));
-        Console.WriteLine(_word.Length / 2);
       }
       char[] charArray = splitString2.ToCharArray();
       Array.Reverse(charArray);
       splitString2 = new string(charArray);
-      Console.WriteLine(splitString1);
-      Console.WriteLine(splitString2);
       if(splitString1==splitString2)
       {
         return true;

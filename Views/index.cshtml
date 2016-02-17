@@ -6,24 +6,16 @@
     <link rel='stylesheet' href='Content/css/styles.css'>
   </head>
   <body>
-    <h1>Pick your weapon!</h1>
-    <form action="/player2" method="post">
-      <button type="submit" name="player1" value="Rock">Rock</button>
+    <h1>Enter a word to see if it's a Palindrome</h1>
+    <form action="/" method="post">
+      <input type="text" name="text"> Enter some text, why not? <br>
+      <button type="submit" name="player1" value="Paper">Submit</button>
     </form>
-    <form action="/player2" method="post">
-      <button type="submit" name="player1" value="Scissors">Scissors</button>
-    </form>
-    <form action="/player2" method="post">
-      <button type="submit" name="player1" value="Paper">Paper</button>
-    </form>
-
     <ul>
       @{
         if(Model!=null)
         {
-
-            <h2>WINNER IS: @Model</h2>
-
+            <h2>Is a Palindrome? @Model</h2>
         }
       }
     </ul>
